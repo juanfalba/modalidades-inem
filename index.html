@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modalidades - INEM Francisco de Paula Santander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Modalidades.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/inem.png" alt="Logo INEM Francisco de Paula Santander">
+        </div>
+        <h1>Modalidades Académicas</h1>
+        <p>Explora nuestras modalidades y elige la mejor opción para tu futuro</p>
+    </header>
+
+    <main class="content">
+        <section class="modalidades">
+            <button class="carousel-button left" onclick="scrollCarousel(-1)">&#10094;</button>
+            <div class="modalidades-carousel">
+                <div class="modalidad-card" style="background-image: url('img/Ciencias.jpg');">
+                    <a href="Cienciasymatematicas.html" class="overlay">
+                        <h2>Ciencias y Matemáticas</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/educacionfisica.jpg');">
+                    <a href="Educacionfisica.html" class="overlay">
+                        <h2>Educación Física</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/humanidades.jpg');">
+                    <a href="Humanidades.html" class="overlay">
+                        <h2>Humanidades</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/artes.jpg');">
+                    <a href="Artes.html" class="overlay">
+                        <h2>Artes</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/salud.png');">
+                    <a href="Salud.html" class="overlay">
+                        <h2>Salud</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/programacion.jpg');">
+                    <a href="Programacionydiseñoweb.html" class="overlay">
+                        <h2>Programación y Diseño Web</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/asistenciaadministrativa.jpg');">
+                    <a href="AsistenciaAdministrativa.html" class="overlay">
+                        <h2>Asistencia Administrativa</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/asistenciafinanciera.jpg');">
+                    <a href="AsistenciaFinanciera.html" class="overlay">
+                        <h2>Asistencia Financiera</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/diseñoindustrial.jpg');">
+                    <a href="DiseñoIndustrial.html" class="overlay">
+                        <h2>Diseño Industrial</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/idiomas.png');">
+                    <a href="Idiomas.html" class="overlay">
+                        <h2>Idiomas</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/mecatronica.jpg');">
+                    <a href="Mecatronica.html" class="overlay">
+                        <h2>Mecatrónica</h2>
+                    </a>
+                </div>
+                <div class="modalidad-card" style="background-image: url('img/quimica.jpg');">
+                    <a href="QuimicaIndustrial.html" class="overlay">
+                        <h2>Química Industrial</h2>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-button right" onclick="scrollCarousel(1)">&#10095;</button>
+        </section>
+    </main>
+
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.querySelector('.modalidades-carousel');
+            const scrollAmount = carousel.clientWidth * 0.5;
+            carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
